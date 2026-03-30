@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Замена Peugeot 3008 — Сравнение автомобилей</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      /* Design System — light surfaces */
+      --bg:                   #f8f9ff;   /* surface */
+      --card-bg:              #ffffff;   /* surface-container-lowest */
+      --card-surface:         #eff4ff;   /* surface-container-low */
+      --card-surface-mid:     #e5eeff;   /* surface-container */
+      --card-surface-high:    #dce9ff;   /* surface-container-high */
+      --card-border:          rgba(198,198,205,0.18); /* ghost border */
+      --card-border-solid:    #c6c6cd;   /* outline-variant */
+
+      --text:           #0b1c30;   /* on-surface */
+      --text-secondary: #45464d;   /* on-surface-variant */
+      --text-muted:     #76777d;   /* outline */
+
+      --accent:         #2180ff;   /* on-primary-container */
+      --accent-hover:   #005bc0;   /* surface-tint */
+      --accent-dim:     #adc7ff;   /* inverse-primary */
+      --primary-dark:   #001a41;   /* primary-container */
+
+      --green:          #22c55e;
+      --eco:            #89f5e7;   /* tertiary-fixed */
+      --eco-text:       #005049;   /* on-tertiary-fixed-variant */
+
+      /* Badges */
+      --smaller-bg:   rgba(186,26,26,0.09);
+      --smaller-text: #ba1a1a;
+      --same-bg:      rgba(118,119,125,0.1);
+      --same-text:    #45464d;
+      --bigger-bg:    rgba(12,148,136,0.09);
+      --bigger-text:  #005049;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Header / Nav ── */
+    .header {
+      background: rgba(248,249,255,0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 2px;
+      letter-spacing: -0.3px;
+      color: var(--text);
+    }
+    .header h1 span { color: var(--accent); }
+    .header p { color: var(--text-secondary); font-size: 15px; font-weight: 500; letter-spacing: 0.1px; }
+
+    /* ── Filters bar ── */
+    .filters-bar {
+      background: var(--card-surface);
+      border-bottom: none;
+      padding: 12px 0;
+      position: sticky;
+      top: 62px;
+      z-index: 99;
+    }
+
+    .filters-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    .filter-group { display: flex; flex-direction: column; gap: 3px; }
+    .filter-group label {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px; text-transform: uppercase; color: var(--text-muted);
+      letter-spacing: 0.6px; font-weight: 600;
+    }
+
+    .filter-group select, .filter-group input {
+      background: var(--card-bg); color: var(--text);
+      border: 1px solid var(--card-border);
+      padding: 9px 12px; border-radius: 8px; font-size: 15px; font-family: inherit;
+      outline: none; min-width: 130px;
+      box-shadow: 0 1px 3px rgba(11,28,48,0.04);
+    }
+    .filter-group select:focus, .filter-group input:focus {
+      border-color: var(--accent); box-shadow: 0 0 0 2px rgba(33,128,255,0.12);
+    }
+    .filter-group input[type="text"] { min-width: 180px; }
+
+    /* ---- Model multi-select dropdown ---- */
+    .model-dropdown-wrap { position: relative; }
+    .model-dropdown-btn {
+      background: var(--card-bg); color: var(--text); border: 1px solid var(--card-border);
+      padding: 9px 34px 9px 12px; border-radius: 8px; font-size: 15px; font-family: inherit;
+      outline: none; min-width: 180px; cursor: pointer; text-align: left;
+      position: relative; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      box-shadow: 0 1px 3px rgba(11,28,48,0.04);
+    }
+    .model-dropdown-btn::after {
+      content: '▾'; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      color: var(--text-muted); pointer-events: none;
+    }
+    .model-dropdown-btn:focus, .model-dropdown-btn.open {
+      border-color: var(--accent); box-shadow: 0 0 0 2px rgba(33,128,255,0.12);
+    }
+    .model-dropdown-list {
+      display: none; position: absolute; top: calc(100% + 6px); left: 0; z-index: 200;
+      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px;
+      min-width: 220px; max-height: 280px; overflow-y: auto;
+      box-shadow: 0 8px 24px rgba(11,28,48,0.1);
+    }
+    .model-dropdown-list.open { display: block; }
+    .model-dd-search {
+      width: 100%; box-sizing: border-box; padding: 10px 14px;
+      background: var(--card-surface); color: var(--text); border: none;
+      border-bottom: 1px solid var(--card-border); font-size: 15px; font-family: inherit;
+      outline: none; border-radius: 12px 12px 0 0;
+    }
+    .model-dd-item {
+      display: flex; align-items: center; gap: 8px; padding: 9px 14px;
+      cursor: pointer; font-size: 15px; transition: background 0.12s;
+    }
+    .model-dd-item:hover { background: var(--card-surface); }
+    .model-dd-item input[type=checkbox] { accent-color: var(--accent); width: 14px; height: 14px; cursor: pointer; }
+    .model-dd-actions {
+      display: flex; gap: 6px; padding: 8px 10px;
+      border-top: 1px solid var(--card-border);
+      background: var(--card-surface);
+      border-radius: 0 0 12px 12px;
+    }
+    .model-dd-actions button {
+      flex: 1; padding: 7px 10px; font-size: 13px; border-radius: 6px; cursor: pointer;
+      border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-secondary);
+      font-family: inherit; font-weight: 600; transition: background 0.12s;
+    }
+    .model-dd-actions button:hover { background: var(--card-surface-high); color: var(--text); }
+
+    /* ---- Price range ---- */
+    .price-range-wrap { display: flex; flex-direction: column; gap: 3px; }
+    .price-range-inputs { display: flex; gap: 4px; align-items: center; }
+    .price-range-inputs input[type=number] {
+      width: 100px; background: var(--card-bg); color: var(--text);
+      border: 1px solid var(--card-border); border-radius: 8px;
+      padding: 9px 10px; font-size: 15px; font-family: inherit; outline: none;
+      box-shadow: 0 1px 3px rgba(11,28,48,0.04);
+    }
+    .price-range-inputs input[type=number]:focus {
+      border-color: var(--accent); box-shadow: 0 0 0 2px rgba(33,128,255,0.12);
+    }
+    .price-range-inputs span { color: var(--text-muted); font-size: 15px; }
+    .price-range-inputs input[type=number]::-webkit-inner-spin-button,
+    .price-range-inputs input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
+
+    /* ---- Country multi-select ---- */
+    .country-dropdown-wrap { position: relative; }
+    .country-dropdown-btn {
+      background: var(--card-bg); color: var(--text); border: 1px solid var(--card-border);
+      padding: 9px 34px 9px 12px; border-radius: 8px; font-size: 15px; font-family: inherit;
+      outline: none; min-width: 150px; cursor: pointer; text-align: left;
+      position: relative; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      box-shadow: 0 1px 3px rgba(11,28,48,0.04);
+    }
+    .country-dropdown-btn::after {
+      content: '▾'; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      color: var(--text-muted); pointer-events: none;
+    }
+    .country-dropdown-btn:focus, .country-dropdown-btn.open {
+      border-color: var(--accent); box-shadow: 0 0 0 2px rgba(33,128,255,0.12);
+    }
+    .country-dropdown-list {
+      display: none; position: absolute; top: calc(100% + 6px); left: 0; z-index: 200;
+      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px;
+      min-width: 180px; max-height: 240px; overflow-y: auto;
+      box-shadow: 0 8px 24px rgba(11,28,48,0.1);
+    }
+    .country-dropdown-list.open { display: block; }
+    .country-dd-item {
+      display: flex; align-items: center; gap: 8px; padding: 9px 14px;
+      cursor: pointer; font-size: 15px; transition: background 0.12s;
+    }
+    .country-dd-item:hover { background: var(--card-surface); }
+    .country-dd-item input[type=checkbox] { accent-color: var(--accent); width: 14px; height: 14px; cursor: pointer; }
+    .country-dd-actions {
+      display: flex; gap: 6px; padding: 8px 10px;
+      border-top: 1px solid var(--card-border);
+      background: var(--card-surface);
+      border-radius: 0 0 12px 12px;
+    }
+    .country-dd-actions button {
+      flex: 1; padding: 7px 10px; font-size: 13px; border-radius: 6px; cursor: pointer;
+      border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-secondary);
+      font-family: inherit; font-weight: 600; transition: background 0.12s;
+    }
+    .country-dd-actions button:hover { background: var(--card-surface-high); color: var(--text); }
+
+    /* ── Info bar ── */
+    .info-bar {
+      max-width: 1440px;
+      margin: 12px auto 0;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .reference-card {
+      background: var(--card-surface);
+      border-radius: 10px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 13px;
+      flex: 1;
+      border: none;
+    }
+    .reference-card .ref-label {
+      color: var(--accent);
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      white-space: nowrap;
+      letter-spacing: -0.2px;
+    }
+    .reference-card .ref-specs { display: flex; gap: 16px; flex-wrap: wrap; color: var(--text-secondary); font-weight: 500; font-size: 15px; }
+    .reference-card .ref-specs span { white-space: nowrap; }
+
+    .count { color: var(--text-secondary); font-size: 15px; white-space: nowrap; font-weight: 500; }
+    .count strong { color: var(--text); font-weight: 700; }
+
+    /* ── Grid ── */
+    .grid {
+      max-width: 1440px;
+      margin: 16px auto;
+      padding: 0 24px 64px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+    }
+
+    /* ── Card ── */
+    .car-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+      animation: fadeUp 0.3s ease both;
+    }
+    .car-card:hover {
+      border-color: rgba(33,128,255,0.2);
+      box-shadow: 0 4px 20px rgba(11,28,48,0.07);
+      transform: translateY(-2px);
+    }
+    .car-card.is-reference {
+      border-color: rgba(33,128,255,0.3);
+      box-shadow: 0 0 0 3px rgba(33,128,255,0.07);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Card header ── */
+    .card-header {
+      padding: 16px 16px 12px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      /* subtle brand tint applied via inline style at 5% opacity */
+    }
+    .card-header-left { flex: 1; }
+
+    .card-header .card-brand {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+      font-weight: 600;
+    }
+
+    .card-header .card-model-name {
+      font-family: 'Manrope', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.3px;
+      color: var(--text);
+    }
+
+    .card-header .card-country-line {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    .card-badges-row {
+      display: flex;
+      gap: 5px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* Chips — design system style */
+    .badge {
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      font-family: 'Inter', sans-serif;
+    }
+    .badge.smaller  { background: var(--smaller-bg);  color: var(--smaller-text); }
+    .badge.same     { background: var(--same-bg);     color: var(--same-text); }
+    .badge.bigger   { background: var(--bigger-bg);   color: var(--bigger-text); }
+    .badge.hybrid-yes { background: rgba(12,148,136,0.1); color: var(--eco-text); }
+    .badge.hybrid-no  { background: var(--card-surface-high); color: var(--text-secondary); }
+    .badge.reference  { background: var(--primary-dark); color: var(--accent-dim); }
+
+    .card-logo-box {
+      width: 48px; height: 48px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 6px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 1px 4px rgba(11,28,48,0.06);
+    }
+    .card-logo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .card-logo-box .logo-text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800; color: var(--text); font-size: 9px; text-transform: uppercase;
+      letter-spacing: 0.5px; text-align: center; line-height: 1.1;
+    }
+
+    /* ── Car image ── */
+    .car-image-section {
+      height: 190px;
+      background: var(--card-surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .car-image-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .car-image-section .img-tabs {
+      position: absolute;
+      bottom: 8px;
+      right: 10px;
+      display: flex;
+      gap: 4px;
+    }
+    .car-image-section .img-tab {
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(248,249,255,0.85);
+      backdrop-filter: blur(6px);
+      color: var(--text-secondary);
+      cursor: pointer;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.2px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .car-image-section .img-tab.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* ── Specs grid (tonal stripes — no hard borders) ── */
+    .card-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      background: transparent;
+      margin: 0;
+    }
+
+    .spec-cell {
+      padding: 13px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .spec-cell:nth-child(odd) { background: var(--card-surface); }
+    .spec-cell:nth-child(even) { background: var(--card-bg); }
+
+    .spec-cell .sl {
+      font-size: 11px; color: var(--text-muted); text-transform: uppercase;
+      letter-spacing: 0.5px; font-weight: 600; font-family: 'Inter', sans-serif;
+    }
+    .spec-cell .sv { font-size: 17px; font-weight: 700; color: var(--text); font-family: 'Manrope', sans-serif; }
+    .spec-cell .sv.price { color: #0d7a4e; }
+    .spec-cell .sv.hp    { color: var(--accent); }
+
+    /* ── Card footer ── */
+    .card-footer {
+      padding: 10px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: var(--card-bg);
+    }
+
+    .card-submodels { font-size: 14px; color: var(--text-secondary); font-weight: 500; }
+
+    .card-actions { display: flex; gap: 8px; }
+
+    .btn {
+      flex: 1; padding: 11px 16px; border-radius: 8px; font-size: 15px; font-weight: 700;
+      font-family: 'Manrope', sans-serif; cursor: pointer; border: none; text-align: center;
+      text-decoration: none; transition: all 0.15s; display: inline-flex;
+      align-items: center; justify-content: center; gap: 5px; letter-spacing: 0.2px;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+      color: #fff;
+    }
+    .btn-primary:hover { filter: brightness(1.06); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(198,198,205,0.45);
+    }
+    .btn-secondary:hover { background: var(--card-surface); border-color: rgba(33,128,255,0.2); }
+
+    /* ── Expandable details ── */
+    .card-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .car-card.expanded .card-details { max-height: 700px; }
+
+    .details-inner {
+      padding: 12px 14px 16px;
+      background: var(--card-surface);
+    }
+
+    .details-title {
+      font-size: 13px; font-weight: 700; margin-bottom: 10px;
+      color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+    }
+
+    .detail-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 8px 10px; border-radius: 6px; font-size: 14px;
+    }
+    .detail-row:nth-child(odd)  { background: var(--card-bg); }
+    .detail-row:nth-child(even) { background: var(--card-surface-high); }
+    .detail-row .dl { color: var(--text-secondary); font-weight: 500; }
+    .detail-row .dv { font-weight: 700; text-align: right; font-family: 'Manrope', sans-serif; }
+
+    .expand-icon { transition: transform 0.3s; display: inline-block; font-size: 10px; }
+    .car-card.expanded .expand-icon { transform: rotate(180deg); }
+
+    .no-results {
+      grid-column: 1 / -1; text-align: center; padding: 80px 20px;
+      color: var(--text-secondary); font-size: 15px; font-weight: 500;
+    }
+
+    /* ── Size bar ── */
+    .size-bar-wrap { padding: 0 14px; margin-bottom: 2px; }
+    .size-bar {
+      height: 3px; border-radius: 2px; background: var(--card-surface-high);
+      position: relative; overflow: visible;
+    }
+    .size-bar .fill {
+      height: 100%; border-radius: 2px; position: absolute; left: 0; top: 0;
+    }
+    .size-bar .ref-line {
+      position: absolute; top: -3px; height: 9px; width: 2px;
+      background: var(--accent); border-radius: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; gap: 12px; }
+      .filters-inner { gap: 6px; }
+      .filter-group select, .filter-group input { min-width: 100px; font-size: 12px; }
+      .model-dropdown-btn, .country-dropdown-btn { min-width: 130px; font-size: 12px; }
+      .price-range-inputs input[type=number] { width: 70px; font-size: 12px; }
+      .card-specs { grid-template-columns: 1fr 1fr; }
+      .details-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══════════════════════════════════════
+       COMPARISON FEATURE
+    ═══════════════════════════════════════ */
+
+    /* Compare toggle button on each card */
+    .btn-compare {
+      flex: none;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      border: 1.5px solid rgba(33,128,255,0.35);
+      background: transparent;
+      color: var(--accent);
+      transition: all 0.15s;
+      white-space: nowrap;
+      letter-spacing: 0.2px;
+    }
+    .btn-compare:hover { background: rgba(33,128,255,0.07); }
+    .btn-compare.selected {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .car-card.in-compare { box-shadow: 0 0 0 2.5px var(--accent); border-color: var(--accent); }
+
+    /* ── Compare tray (sticky bottom) ── */
+    .compare-tray {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(33,128,255,0.15);
+      box-shadow: 0 -4px 24px rgba(11,28,48,0.1);
+      padding: 12px 24px;
+      transform: translateY(100%);
+      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .compare-tray.visible { transform: translateY(0); }
+
+    .compare-tray-inner {
+      max-width: 1440px; margin: 0 auto;
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+
+    .compare-tray-label {
+      font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .compare-tray-cars {
+      display: flex; gap: 8px; flex: 1; flex-wrap: wrap;
+    }
+
+    .tray-car-chip {
+      display: flex; align-items: center; gap: 7px;
+      background: var(--card-surface); border-radius: 999px;
+      padding: 6px 12px 6px 8px; font-size: 14px; font-weight: 600;
+      font-family: 'Manrope', sans-serif; color: var(--text);
+      border: 1px solid var(--card-border);
+    }
+    .tray-car-chip img {
+      width: 20px; height: 20px; object-fit: contain;
+      background: white; border-radius: 50%; padding: 2px;
+      border: 1px solid var(--card-border);
+    }
+    .tray-chip-remove {
+      width: 16px; height: 16px; border-radius: 50%;
+      background: rgba(11,28,48,0.08); border: none; cursor: pointer;
+      font-size: 10px; line-height: 1; color: var(--text-secondary);
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.12s;
+    }
+    .tray-chip-remove:hover { background: rgba(186,26,26,0.15); color: #ba1a1a; }
+
+    .tray-slots {
+      display: flex; gap: 6px; align-items: center;
+    }
+    .tray-slot {
+      width: 32px; height: 32px; border-radius: 8px;
+      border: 1.5px dashed rgba(33,128,255,0.3);
+      background: rgba(33,128,255,0.04);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; color: rgba(33,128,255,0.3);
+    }
+
+    .compare-tray-actions { display: flex; gap: 8px; align-items: center; margin-left: auto; }
+    .btn-clear-compare {
+      padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 600;
+      font-family: 'Inter', sans-serif; cursor: pointer;
+      border: 1px solid var(--card-border); background: transparent;
+      color: var(--text-secondary); transition: all 0.12s;
+    }
+    .btn-clear-compare:hover { color: #ba1a1a; border-color: rgba(186,26,26,0.3); }
+    .btn-open-compare {
+      padding: 11px 24px; border-radius: 999px; font-size: 15px; font-weight: 700;
+      font-family: 'Manrope', sans-serif; cursor: pointer; border: none;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: #fff; transition: filter 0.15s; white-space: nowrap;
+    }
+    .btn-open-compare:hover { filter: brightness(1.07); }
+    .btn-open-compare:disabled { opacity: 0.5; cursor: default; filter: none; }
+
+    /* ── Comparison Modal ── */
+    .compare-modal {
+      position: fixed; inset: 0; z-index: 500;
+      display: flex; flex-direction: column;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .compare-modal.open { opacity: 1; pointer-events: all; }
+
+    .compare-modal-overlay {
+      position: absolute; inset: 0;
+      background: rgba(11,28,48,0.45);
+      backdrop-filter: blur(4px);
+    }
+
+    .compare-modal-panel {
+      position: relative; z-index: 1;
+      background: var(--bg);
+      border-radius: 20px 20px 0 0;
+      margin-top: 48px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 -8px 40px rgba(11,28,48,0.15);
+      transform: translateY(30px);
+      transition: transform 0.25s cubic-bezier(0.34, 1.2, 0.64, 1);
+    }
+    .compare-modal.open .compare-modal-panel { transform: translateY(0); }
+
+    /* Modal top bar */
+    .compare-modal-topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 24px 12px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--card-border);
+      flex-shrink: 0;
+    }
+    .compare-modal-title {
+      font-family: 'Manrope', sans-serif; font-size: 20px; font-weight: 800;
+      color: var(--text); letter-spacing: -0.3px;
+    }
+    .compare-modal-title span { color: var(--accent); }
+    .btn-close-compare {
+      width: 34px; height: 34px; border-radius: 999px;
+      background: var(--card-surface); border: none; cursor: pointer;
+      font-size: 18px; color: var(--text-secondary); line-height: 1;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.12s;
+    }
+    .btn-close-compare:hover { background: var(--card-surface-high); color: var(--text); }
+
+    /* Scrollable comparison body */
+    .compare-modal-body {
+      flex: 1;
+      overflow: auto;
+    }
+
+    /* Comparison table */
+    .compare-table {
+      min-width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    .compare-table colgroup col:first-child { width: 180px; }
+    .compare-table colgroup col + col { min-width: 200px; }
+
+    /* Sticky car header row */
+    .compare-table thead {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .compare-table thead th {
+      background: var(--card-bg);
+      border-bottom: 2px solid var(--card-surface-high);
+      padding: 0;
+      vertical-align: top;
+    }
+    .compare-table thead th:first-child {
+      background: var(--card-bg);
+    }
+
+    .cmp-car-header {
+      display: flex; flex-direction: column; align-items: center;
+      padding: 16px 12px 14px; gap: 8px; text-align: center; position: relative;
+    }
+    .cmp-car-img {
+      width: 100%; height: 100px; object-fit: cover; border-radius: 10px;
+      background: var(--card-surface);
+    }
+    .cmp-car-logo {
+      width: 32px; height: 32px; object-fit: contain;
+      background: white; border-radius: 8px; padding: 4px;
+      border: 1px solid var(--card-border);
+      position: absolute; top: 20px; right: 16px;
+    }
+    .cmp-car-name {
+      font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 800;
+      color: var(--text); line-height: 1.2; letter-spacing: -0.2px;
+    }
+    .cmp-car-sub {
+      font-size: 11px; color: var(--text-secondary); font-weight: 500;
+    }
+    .cmp-car-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 700;
+      font-family: 'Manrope', sans-serif;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: #fff; text-decoration: none; transition: filter 0.12s;
+    }
+    .cmp-car-link:hover { filter: brightness(1.08); }
+
+    /* Spec section header */
+    .compare-table .section-row td {
+      background: var(--card-surface-high);
+      padding: 8px 14px;
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--accent);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Spec data rows */
+    .compare-table tbody tr:not(.section-row) td {
+      padding: 13px 16px;
+      font-size: 15px; vertical-align: middle;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .compare-table tbody tr:not(.section-row):nth-child(even) td {
+      background: var(--card-surface);
+    }
+    .compare-table tbody tr:not(.section-row):nth-child(odd) td {
+      background: var(--card-bg);
+    }
+    /* Override for section rows */
+    .compare-table .section-row + tr td,
+    .compare-table .section-row td { background: var(--card-surface-high) !important; }
+
+    /* Row label (first col) */
+    .compare-table td.row-label {
+      font-size: 13px; color: var(--text-secondary); font-weight: 600;
+      font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.4px;
+      white-space: nowrap; background: var(--card-bg) !important;
+      border-right: 2px solid var(--card-surface-high);
+    }
+
+    /* Value cells */
+    .compare-table td.val-cell {
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      color: var(--text); text-align: center;
+    }
+    .compare-table td.val-cell.best {
+      background: rgba(16,163,127,0.08) !important;
+      color: #0d7a4e;
+    }
+    .compare-table td.val-cell.worst {
+      background: rgba(186,26,26,0.07) !important;
+      color: #ba1a1a;
+    }
+    .compare-table td.val-cell .badge {
+      display: inline-block; margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <h1>Замена <span>Peugeot 3008</span> — Сравнение кроссоверов</h1>
+    <p>Бензиновые и гибридные автомобили 2021+ на рынке Израиля</p>
+  </div>
+</div>
+
+<div class="filters-bar">
+  <div class="filters-inner">
+
+    <!-- MODEL multi-select -->
+    <div class="filter-group">
+      <label>По модели</label>
+      <div class="model-dropdown-wrap" id="modelDropdownWrap">
+        <button class="model-dropdown-btn" id="modelDropdownBtn" type="button">Все модели</button>
+        <div class="model-dropdown-list" id="modelDropdownList">
+          <input class="model-dd-search" id="modelDdSearch" type="text" placeholder="Поиск модели...">
+          <div id="modelDdItems"></div>
+          <div class="model-dd-actions">
+            <button id="modelDdAll">Все</button>
+            <button id="modelDdNone">Сброс</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIZE -->
+    <div class="filter-group">
+      <label>Размер</label>
+      <select id="sizeFilter">
+        <option value="all">Все размеры</option>
+        <option value="smaller">Меньше 3008</option>
+        <option value="same">Как 3008</option>
+        <option value="bigger">Больше 3008</option>
+      </select>
+    </div>
+
+    <!-- HYBRID -->
+    <div class="filter-group">
+      <label>Гибрид</label>
+      <select id="hybridFilter">
+        <option value="all">Все</option>
+        <option value="yes">Только гибриды</option>
+        <option value="no">Без гибрида</option>
+      </select>
+    </div>
+
+    <!-- COUNTRY multi-select -->
+    <div class="filter-group">
+      <label>По стране</label>
+      <div class="country-dropdown-wrap" id="countryDropdownWrap">
+        <button class="country-dropdown-btn" id="countryDropdownBtn" type="button">Все страны</button>
+        <div class="country-dropdown-list" id="countryDropdownList">
+          <div id="countryDdItems"></div>
+          <div class="country-dd-actions">
+            <button id="countryDdAll">Все</button>
+            <button id="countryDdNone">Сброс</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICE RANGE -->
+    <div class="filter-group price-range-wrap">
+      <label>Диапазон цены ₪</label>
+      <div class="price-range-inputs">
+        <input type="number" id="priceMin" placeholder="от" min="0" step="5000">
+        <span>—</span>
+        <input type="number" id="priceMax" placeholder="до" min="0" step="5000">
+      </div>
+    </div>
+
+    <!-- SORT -->
+    <div class="filter-group">
+      <label>Сортировка</label>
+      <select id="sortSelect">
+        <option value="price-asc">Цена ↑</option>
+        <option value="price-desc">Цена ↓</option>
+        <option value="hp-desc">Мощность ↓</option>
+        <option value="hp-asc">Мощность ↑</option>
+        <option value="name-asc">Название А-Я</option>
+        <option value="trunk-desc">Багажник ↓</option>
+        <option value="length-desc">Размер ↓</option>
+      </select>
+    </div>
+
+  </div>
+</div>
+
+<div class="info-bar">
+  <div class="reference-card">
+    <span class="ref-label">📐 Эталон: Peugeot 3008</span>
+    <div class="ref-specs">
+      <span>4447 мм</span>
+      <span>Багажник 520 л</span>
+      <span>130–300 л.с.</span>
+      <span>70–95 тыс. ₪</span>
+    </div>
+  </div>
+  <span class="count">Найдено: <strong id="resultCount">0</strong></span>
+</div>
+
+<div class="grid" id="carsGrid"></div>
+
+<script src="data.js"></script>
+<script src="car_images.js"></script>
+<script>
+  // Brand color map for card headers
+  const BRAND_COLORS = {
+    'Peugeot': ['#1b3764', '#2e5090'],
+    'Seat': ['#a83232', '#c04040'],
+    'Skoda': ['#1a5c2e', '#28803f'],
+    'Citroen': ['#6b2a3e', '#8a3650'],
+    'Nissan': ['#8b1a1a', '#b02020'],
+    'Volkswagen': ['#003366', '#004d99'],
+    'Mazda': ['#5c1015', '#8a1a20'],
+    'MG': ['#6b3400', '#a05000'],
+    'Ford': ['#003399', '#0044cc'],
+    'Jeep': ['#2c4a1a', '#3d6626'],
+    'Hyundai': ['#003082', '#004aad'],
+    'Kia': ['#05141f', '#142d42'],
+    'Chery': ['#5a1a2e', '#7a2a40'],
+    'Mitsubishi': ['#cc0000', '#e62020'],
+    'Subaru': ['#004499', '#0066cc'],
+    'Honda': ['#cc0000', '#e62020'],
+    'Toyota': ['#cc0000', '#e62020'],
+    'Opel': ['#f7c600', '#c9a000'],
+    'Cupra': ['#2a3040', '#404860'],
+    'DS': ['#1a1a2e', '#2a2a4a'],
+    'Suzuki': ['#003366', '#005599'],
+  };
+
+  // Local logo file map
+  const BRAND_LOGOS = {
+    'Peugeot': 'logos/peugeot.png',
+    'Seat': 'logos/seat.png',
+    'Skoda': 'logos/skoda.png',
+    'Citroen': 'logos/citroen.png',
+    'Nissan': 'logos/nissan.png',
+    'Volkswagen': 'logos/volkswagen.png',
+    'Mazda': 'logos/mazda.png',
+    'MG': 'logos/mg.png',
+    'Ford': 'logos/ford.png',
+    'Jeep': 'logos/jeep.png',
+    'Hyundai': 'logos/hyundai.png',
+    'Kia': 'logos/kia.png',
+    'Chery': 'logos/chery.png',
+    'Mitsubishi': 'logos/mitsubishi.png',
+    'Subaru': 'logos/subaru.png',
+    'Honda': 'logos/honda.png',
+    'Toyota': 'logos/toyota.png',
+    'Opel': 'logos/opel.png',
+    'Cupra': 'logos/cupra.png',
+    'DS': 'logos/ds.png',
+    'Suzuki': 'logos/suzuki.png',
+  };
+
+  function getCarImageUrl(modelName, view) {
+    const imgs = CAR_IMAGE_URLS[modelName];
+    if (!imgs) return '';
+    return imgs[view] || imgs.front || '';
+  }
+
+  const REF_LENGTH = 4447;
+
+  // Comparison state — declared early so renderCars() can reference it
+  const compareSet = new Set();
+  const MAX_COMPARE = 4;
+
+  // ============================================================
+  // MODEL multi-select dropdown
+  // ============================================================
+  const allModels = CARS.filter(c => !c.isReference).map(c => c.model).sort();
+  let selectedModels = new Set(); // empty = all
+
+  function buildModelDropdown() {
+    const container = document.getElementById('modelDdItems');
+    container.innerHTML = '';
+    allModels.forEach(m => {
+      const item = document.createElement('div');
+      item.className = 'model-dd-item';
+      item.dataset.model = m;
+      const cb = document.createElement('input');
+      cb.type = 'checkbox'; cb.checked = selectedModels.has(m);
+      cb.addEventListener('change', () => {
+        if (cb.checked) selectedModels.add(m); else selectedModels.delete(m);
+        updateModelBtn(); filterCars();
+      });
+      const lbl = document.createElement('span'); lbl.textContent = m;
+      item.appendChild(cb); item.appendChild(lbl);
+      item.addEventListener('click', e => { if (e.target !== cb) cb.click(); });
+      container.appendChild(item);
+    });
+  }
+
+  function updateModelBtn() {
+    const btn = document.getElementById('modelDropdownBtn');
+    if (selectedModels.size === 0) btn.textContent = 'Все модели';
+    else if (selectedModels.size === 1) btn.textContent = [...selectedModels][0];
+    else btn.textContent = `Выбрано: ${selectedModels.size}`;
+  }
+
+  function filterModelDdSearch(q) {
+    document.querySelectorAll('#modelDdItems .model-dd-item').forEach(item => {
+      item.style.display = item.dataset.model.toLowerCase().includes(q.toLowerCase()) ? '' : 'none';
+    });
+  }
+
+  // Model dropdown toggle
+  document.getElementById('modelDropdownBtn').addEventListener('click', e => {
+    e.stopPropagation();
+    const list = document.getElementById('modelDropdownList');
+    const btn  = document.getElementById('modelDropdownBtn');
+    const open = list.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    if (open) document.getElementById('modelDdSearch').focus();
+  });
+  document.getElementById('modelDdSearch').addEventListener('input', e => filterModelDdSearch(e.target.value));
+  document.getElementById('modelDdAll').addEventListener('click', () => {
+    selectedModels = new Set(allModels);
+    buildModelDropdown(); updateModelBtn(); filterCars();
+  });
+  document.getElementById('modelDdNone').addEventListener('click', () => {
+    selectedModels.clear();
+    buildModelDropdown(); updateModelBtn(); filterCars();
+  });
+
+  buildModelDropdown();
+
+  // ============================================================
+  // COUNTRY multi-select dropdown
+  // ============================================================
+  const allCountries = [...new Set(CARS.map(c => c.country))].sort();
+  let selectedCountries = new Set(); // empty = all
+
+  function buildCountryDropdown() {
+    const container = document.getElementById('countryDdItems');
+    container.innerHTML = '';
+    allCountries.forEach(country => {
+      const item = document.createElement('div');
+      item.className = 'country-dd-item';
+      item.dataset.country = country;
+      const cb = document.createElement('input');
+      cb.type = 'checkbox'; cb.checked = selectedCountries.has(country);
+      cb.addEventListener('change', () => {
+        if (cb.checked) selectedCountries.add(country); else selectedCountries.delete(country);
+        updateCountryBtn(); filterCars();
+      });
+      const lbl = document.createElement('span'); lbl.textContent = country;
+      item.appendChild(cb); item.appendChild(lbl);
+      item.addEventListener('click', e => { if (e.target !== cb) cb.click(); });
+      container.appendChild(item);
+    });
+  }
+
+  function updateCountryBtn() {
+    const btn = document.getElementById('countryDropdownBtn');
+    if (selectedCountries.size === 0) btn.textContent = 'Все страны';
+    else if (selectedCountries.size === 1) btn.textContent = [...selectedCountries][0];
+    else btn.textContent = `Выбрано: ${selectedCountries.size}`;
+  }
+
+  document.getElementById('countryDropdownBtn').addEventListener('click', e => {
+    e.stopPropagation();
+    const list = document.getElementById('countryDropdownList');
+    const btn  = document.getElementById('countryDropdownBtn');
+    const open = list.classList.toggle('open');
+    btn.classList.toggle('open', open);
+  });
+  document.getElementById('countryDdAll').addEventListener('click', () => {
+    selectedCountries = new Set(allCountries);
+    buildCountryDropdown(); updateCountryBtn(); filterCars();
+  });
+  document.getElementById('countryDdNone').addEventListener('click', () => {
+    selectedCountries.clear();
+    buildCountryDropdown(); updateCountryBtn(); filterCars();
+  });
+
+  buildCountryDropdown();
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', e => {
+    if (!document.getElementById('modelDropdownWrap').contains(e.target)) {
+      document.getElementById('modelDropdownList').classList.remove('open');
+      document.getElementById('modelDropdownBtn').classList.remove('open');
+    }
+    if (!document.getElementById('countryDropdownWrap').contains(e.target)) {
+      document.getElementById('countryDropdownList').classList.remove('open');
+      document.getElementById('countryDropdownBtn').classList.remove('open');
+    }
+  });
+
+  // ============================================================
+  // FILTER function
+  // ============================================================
+  function filterCars() {
+    const size      = document.getElementById('sizeFilter').value;
+    const hybrid    = document.getElementById('hybridFilter').value;
+    const sort      = document.getElementById('sortSelect').value;
+    const priceMinV = parseInt(document.getElementById('priceMin').value) || 0;
+    const priceMaxV = parseInt(document.getElementById('priceMax').value) || Infinity;
+
+    let filtered = CARS.filter(car => {
+      // Model filter
+      if (selectedModels.size > 0 && !car.isReference && !selectedModels.has(car.model)) return false;
+      // Size filter
+      if (size !== 'all' && car.relation !== size) return false;
+      // Hybrid filter
+      if (hybrid === 'yes' && car.hybrid === 'no') return false;
+      if (hybrid === 'no' && car.hybrid !== 'no') return false;
+      // Country filter
+      if (selectedCountries.size > 0 && !selectedCountries.has(car.country)) return false;
+      // Price range filter
+      if (priceMinV > 0 && car.priceMax < priceMinV) return false;
+      if (priceMaxV < Infinity && car.priceMin > priceMaxV) return false;
+      return true;
+    });
+
+    filtered.sort((a, b) => {
+      switch (sort) {
+        case 'price-asc':  return a.priceMin - b.priceMin;
+        case 'price-desc': return b.priceMin - a.priceMin;
+        case 'hp-desc':    return b.hpMax - a.hpMax;
+        case 'hp-asc':     return a.hpMax - b.hpMax;
+        case 'name-asc':   return a.model.localeCompare(b.model);
+        case 'trunk-desc': return b.trunk - a.trunk;
+        case 'length-desc':return b.length - a.length;
+        default: return 0;
+      }
+    });
+
+    // Always keep reference car at front
+    const refIdx = filtered.findIndex(c => c.isReference);
+    if (refIdx > 0) { const [ref] = filtered.splice(refIdx, 1); filtered.unshift(ref); }
+
+    renderCars(filtered);
+  }
+
+  function sizeBarHTML(length) {
+    // Scale: 4000mm = 0%, 4800mm = 100%
+    const min = 4000, max = 4800;
+    const pct = Math.max(0, Math.min(100, ((length - min) / (max - min)) * 100));
+    const refPct = ((REF_LENGTH - min) / (max - min)) * 100;
+    const color = length < REF_LENGTH - 50 ? 'var(--smaller-text)' : length > REF_LENGTH + 50 ? 'var(--bigger-text)' : 'var(--same-text)';
+    return `<div class="size-bar-wrap">
+      <div class="size-bar">
+        <div class="fill" style="width:${pct}%;background:${color};opacity:0.5"></div>
+        <div class="ref-line" style="left:${refPct}%"></div>
+      </div>
+    </div>`;
+  }
+
+  function renderCars(cars) {
+    const grid = document.getElementById('carsGrid');
+    document.getElementById('resultCount').textContent = cars.length;
+
+    if (cars.length === 0) {
+      grid.innerHTML = '<div class="no-results">Ничего не найдено. Попробуйте изменить фильтры.</div>';
+      return;
+    }
+
+    grid.innerHTML = cars.map((car, i) => {
+      const hybridBadgeClass = car.hybrid === 'no' ? 'hybrid-no' : 'hybrid-yes';
+      const isRef = car.isReference ? 'is-reference' : '';
+      const colors = BRAND_COLORS[car.brand] || ['#2a2d3a', '#3a3d4a'];
+
+      const logoSrc = BRAND_LOGOS[car.brand] || '';
+      const imgFront = getCarImageUrl(car.model, 'front');
+      const imgSide = getCarImageUrl(car.model, 'side');
+      const imgInterior = getCarImageUrl(car.model, 'interior');
+
+      return `
+        <div class="car-card ${isRef}" style="animation-delay:${i * 0.03}s" data-model="${car.model}">
+          <div class="card-header" style="background:${car.isReference ? 'linear-gradient(135deg,#eff6ff,#e8f0fe)' : `linear-gradient(135deg, ${colors[0]}0d, ${colors[1]}06)`}">
+            <div class="card-header-left">
+              <div class="card-brand">${car.brand}</div>
+              <div class="card-model-name">${car.model.replace(car.brand + ' ', '')}</div>
+              <div class="card-country-line">${car.countryFlag} ${car.country} · Сборка: ${car.mfgCountry}</div>
+              <div class="card-badges-row">
+                ${car.isReference ? '<span class="badge reference">Ваш авто</span>' : ''}
+                <span class="badge ${car.relation}">${car.relationRu}</span>
+                <span class="badge ${hybridBadgeClass}">${car.hybridRu}</span>
+              </div>
+            </div>
+            <div class="card-logo-box">
+              <img src="${logoSrc}" alt="${car.brand}" onerror="this.onerror=null;this.style.display='none';this.parentElement.querySelector('.logo-text').style.display='block'">
+              <span class="logo-text" style="display:none">${car.brand}</span>
+            </div>
+          </div>
+
+          <div class="car-image-section" data-imgs='${JSON.stringify([imgSide,imgFront,imgInterior])}' data-idx="0">
+            <img src="${imgSide}" alt="${car.model}" onerror="this.parentElement.style.display='none'">
+            <div class="img-tabs">
+              <button class="img-tab active" onclick="switchImg(this,0,event)">Бок</button>
+              <button class="img-tab" onclick="switchImg(this,1,event)">Перед</button>
+              <button class="img-tab" onclick="switchImg(this,2,event)">Салон</button>
+            </div>
+          </div>
+
+          ${sizeBarHTML(car.length)}
+
+          <div class="card-specs">
+            <div class="spec-cell">
+              <span class="sl">Цена Yad2 ₪</span>
+              <span class="sv price">${car.priceRange}</span>
+            </div>
+            <div class="spec-cell">
+              <span class="sl">Мощность л.с.</span>
+              <span class="sv hp">${car.hp}</span>
+            </div>
+            <div class="spec-cell">
+              <span class="sl">Багажник</span>
+              <span class="sv">${car.trunk} л</span>
+            </div>
+            <div class="spec-cell">
+              <span class="sl">Длина</span>
+              <span class="sv">${car.length} мм</span>
+            </div>
+            <div class="spec-cell">
+              <span class="sl">Привод</span>
+              <span class="sv" style="font-size:11px">${car.driveType}</span>
+            </div>
+            <div class="spec-cell">
+              <span class="sl">Мест</span>
+              <span class="sv">${car.seats}</span>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="card-submodels">Комплектации: ${car.subModels}</div>
+            <div class="card-actions">
+              <a href="${car.yad2}" target="_blank" class="btn btn-primary">Yad2 →</a>
+              <button class="btn-compare${compareSet.has(car.model) ? ' selected' : ''}" data-model="${car.model}" onclick="toggleCompare('${car.model}', this)">
+                ${compareSet.has(car.model) ? '✓ Выбрано' : '+ Сравнить'}
+              </button>
+              <button class="btn btn-secondary" onclick="toggleExpand(this)">
+                <span class="expand-icon">▼</span> Подробнее
+              </button>
+            </div>
+          </div>
+
+          <div class="card-details">
+            <div class="details-inner">
+              <div class="details-title">Полные характеристики</div>
+              <div class="details-grid">
+                <div class="detail-row"><span class="dl">Двигатель</span><span class="dv">${car.engine}</span></div>
+                <div class="detail-row"><span class="dl">Трансмиссия</span><span class="dv">${car.transmission}</span></div>
+                <div class="detail-row"><span class="dl">Длина</span><span class="dv">${car.length} мм</span></div>
+                <div class="detail-row"><span class="dl">Ширина</span><span class="dv">${car.width} мм</span></div>
+                <div class="detail-row"><span class="dl">Высота</span><span class="dv">${car.height} мм</span></div>
+                <div class="detail-row"><span class="dl">Колёсная база</span><span class="dv">${car.wheelbase} мм</span></div>
+                <div class="detail-row"><span class="dl">Вес</span><span class="dv">${car.weight} кг</span></div>
+                <div class="detail-row"><span class="dl">Расход</span><span class="dv">${car.fuel}</span></div>
+                <div class="detail-row"><span class="dl">Безопасность</span><span class="dv">${car.safety}</span></div>
+                <div class="detail-row"><span class="dl">Страна сборки</span><span class="dv">${car.mfgCountry}</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function toggleExpand(btn) {
+    btn.closest('.car-card').classList.toggle('expanded');
+  }
+
+  function switchImg(tab, idx, event) {
+    event.stopPropagation();
+    const section = tab.closest('.car-image-section');
+    const imgs = JSON.parse(section.dataset.imgs);
+    section.querySelector('img').src = imgs[idx];
+    section.querySelectorAll('.img-tab').forEach((t, i) => t.classList.toggle('active', i === idx));
+  }
+
+  // Event listeners
+  ['sizeFilter','hybridFilter','sortSelect'].forEach(id =>
+    document.getElementById(id).addEventListener('change', filterCars)
+  );
+  ['priceMin','priceMax'].forEach(id =>
+    document.getElementById(id).addEventListener('input', filterCars)
+  );
+
+  filterCars();
+
+  // ═══════════════════════════════════════════════
+  // COMPARISON FEATURE
+  // ═══════════════════════════════════════════════
+
+  // (compareSet + MAX_COMPARE declared near top to be available in renderCars)
+
+  // Spec rows definition for comparison table
+  const COMPARE_SECTIONS = [
+    {
+      section: 'Цена и тип',
+      rows: [
+        { label: 'Цена Yad2 ₪',     get: c => c.priceRange, num: c => c.priceMin, low: true },
+        { label: 'Тип',              get: c => c.hybridRu },
+        { label: 'Страна бренда',    get: c => c.countryFlag + ' ' + c.country },
+        { label: 'Страна сборки',    get: c => c.mfgCountry },
+      ]
+    },
+    {
+      section: 'Двигатель и динамика',
+      rows: [
+        { label: 'Мощность л.с.',    get: c => c.hp,           num: c => c.hpMax,     low: false },
+        { label: 'Двигатель',        get: c => c.engine },
+        { label: 'Трансмиссия',      get: c => c.transmission },
+        { label: 'Привод',           get: c => c.driveType },
+        { label: 'Расход топлива',   get: c => c.fuel },
+      ]
+    },
+    {
+      section: 'Габариты',
+      rows: [
+        { label: 'Длина',            get: c => c.length + ' мм',    num: c => c.length,    low: false },
+        { label: 'Ширина',           get: c => c.width + ' мм',     num: c => c.width,     low: false },
+        { label: 'Высота',           get: c => c.height + ' мм',    num: c => c.height },
+        { label: 'Колёсная база',    get: c => c.wheelbase + ' мм', num: c => c.wheelbase, low: false },
+        { label: 'Вес',              get: c => c.weight + ' кг' },
+      ]
+    },
+    {
+      section: 'Практичность',
+      rows: [
+        { label: 'Багажник',         get: c => c.trunk + ' л',      num: c => c.trunk,     low: false },
+        { label: 'Мест',             get: c => String(c.seats) },
+        { label: 'Безопасность',     get: c => c.safety },
+        { label: 'Комплектации',     get: c => c.subModels },
+      ]
+    },
+  ];
+
+  function toggleCompare(modelName, btnEl) {
+    if (compareSet.has(modelName)) {
+      compareSet.delete(modelName);
+    } else {
+      if (compareSet.size >= MAX_COMPARE) {
+        // Visual shake on tray
+        const tray = document.getElementById('compareTray');
+        tray.style.animation = 'none';
+        tray.offsetHeight;
+        tray.style.animation = '';
+        return;
+      }
+      compareSet.add(modelName);
+    }
+    updateCompareTray();
+    updateAllCompareButtons();
+  }
+
+  function updateAllCompareButtons() {
+    document.querySelectorAll('.btn-compare').forEach(btn => {
+      const model = btn.dataset.model;
+      const sel = compareSet.has(model);
+      btn.classList.toggle('selected', sel);
+      btn.textContent = sel ? '✓ Выбрано' : '+ Сравнить';
+      btn.closest('.car-card').classList.toggle('in-compare', sel);
+    });
+  }
+
+  function updateCompareTray() {
+    const tray   = document.getElementById('compareTray');
+    const carsEl = document.getElementById('compareTrayCars');
+    const badge  = document.getElementById('compareCountBadge');
+    const openBtn = document.getElementById('btnOpenCompare');
+
+    const count = compareSet.size;
+    tray.classList.toggle('visible', count > 0);
+    badge.textContent = count;
+    openBtn.disabled = count < 2;
+
+    const selectedCars = CARS.filter(c => compareSet.has(c.model));
+
+    // Build chips for selected cars
+    let html = selectedCars.map(car => {
+      const logo = BRAND_LOGOS[car.brand] || '';
+      const shortName = car.model.replace(car.brand + ' ', '');
+      return `<div class="tray-car-chip">
+        <img src="${logo}" alt="${car.brand}" onerror="this.style.display='none'">
+        ${shortName}
+        <button class="tray-chip-remove" onclick="toggleCompare('${car.model}')" title="Убрать">✕</button>
+      </div>`;
+    }).join('');
+
+    // Add empty slot indicators
+    const emptySlots = MAX_COMPARE - count;
+    if (emptySlots > 0 && count > 0) {
+      html += `<div class="tray-slots">${Array(emptySlots).fill('<div class="tray-slot">+</div>').join('')}</div>`;
+    }
+
+    carsEl.innerHTML = html;
+  }
+
+  function clearCompare() {
+    compareSet.clear();
+    updateCompareTray();
+    updateAllCompareButtons();
+  }
+
+  function openComparison() {
+    if (compareSet.size < 2) return;
+    const cars = CARS.filter(c => compareSet.has(c.model));
+    renderComparisonModal(cars);
+    document.getElementById('compareModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeComparison() {
+    document.getElementById('compareModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeComparison(); });
+
+  function renderComparisonModal(cars) {
+    // Title
+    document.getElementById('compareModalTitle').textContent =
+      cars.map(c => c.model.replace(c.brand + ' ', '')).join(' vs ');
+
+    // Build table
+    let thead = `<thead><tr>
+      <th><div style="height:100%;padding:12px 14px;display:flex;align-items:flex-end">
+        <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);font-family:Inter,sans-serif">Характеристика</span>
+      </div></th>`;
+
+    cars.forEach(car => {
+      const logo    = BRAND_LOGOS[car.brand] || '';
+      const imgSrc  = getCarImageUrl(car.model, 'side');
+      const hybridBadgeClass = car.hybrid === 'no' ? 'hybrid-no' : 'hybrid-yes';
+      thead += `<th>
+        <div class="cmp-car-header">
+          <img class="cmp-car-img" src="${imgSrc}" alt="${car.model}" onerror="this.src=''">
+          <img class="cmp-car-logo" src="${logo}" alt="${car.brand}" onerror="this.style.display='none'">
+          <div class="cmp-car-name">${car.brand}<br>${car.model.replace(car.brand + ' ', '')}</div>
+          <div class="cmp-car-sub">
+            ${car.countryFlag} ${car.country} &nbsp;·&nbsp;
+            <span class="badge ${hybridBadgeClass}">${car.hybridRu}</span>
+          </div>
+          <a class="cmp-car-link" href="${car.yad2}" target="_blank">Yad2 →</a>
+        </div>
+      </th>`;
+    });
+    thead += '</tr></thead>';
+
+    // Build body rows
+    let tbody = '<tbody>';
+    COMPARE_SECTIONS.forEach(section => {
+      // Section header row
+      tbody += `<tr class="section-row"><td colspan="${cars.length + 1}">${section.section}</td></tr>`;
+
+      section.rows.forEach(row => {
+        const values = cars.map(c => row.get(c));
+        const nums   = row.num ? cars.map(c => row.num(c)) : null;
+
+        // Determine best/worst indices
+        let bestIdx = -1, worstIdx = -1;
+        if (nums && nums.length > 1 && row.low !== undefined) {
+          const valid = nums.filter(n => n != null && !isNaN(n));
+          if (valid.length > 1) {
+            const bestVal  = row.low ? Math.min(...valid) : Math.max(...valid);
+            const worstVal = row.low ? Math.max(...valid) : Math.min(...valid);
+            if (bestVal !== worstVal) {
+              bestIdx  = nums.findIndex(n => n === bestVal);
+              worstIdx = nums.findIndex(n => n === worstVal);
+            }
+          }
+        }
+
+        tbody += `<tr><td class="row-label">${row.label}</td>`;
+        values.forEach((val, i) => {
+          let cls = 'val-cell';
+          if (i === bestIdx)  cls += ' best';
+          if (i === worstIdx) cls += ' worst';
+          tbody += `<td class="${cls}">${val || '—'}</td>`;
+        });
+        tbody += '</tr>';
+      });
+    });
+    tbody += '</tbody>';
+
+    const colgroup = `<colgroup><col style="width:170px">${cars.map(() => '<col>').join('')}</colgroup>`;
+
+    document.getElementById('compareModalBody').innerHTML =
+      `<table class="compare-table">${colgroup}${thead}${tbody}</table>`;
+  }
+</script>
+
+<!-- ═══════════════ COMPARE TRAY ═══════════════ -->
+<div class="compare-tray" id="compareTray">
+  <div class="compare-tray-inner">
+    <span class="compare-tray-label">Сравнение</span>
+    <div class="compare-tray-cars" id="compareTrayCars"></div>
+    <div class="compare-tray-actions">
+      <button class="btn-clear-compare" onclick="clearCompare()">Очистить</button>
+      <button class="btn-open-compare" id="btnOpenCompare" onclick="openComparison()" disabled>
+        Сравнить <span id="compareCountBadge">0</span> авто →
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ COMPARE MODAL ═══════════════ -->
+<div class="compare-modal" id="compareModal">
+  <div class="compare-modal-overlay" onclick="closeComparison()"></div>
+  <div class="compare-modal-panel">
+    <div class="compare-modal-topbar">
+      <div class="compare-modal-title">Сравнение: <span id="compareModalTitle"></span></div>
+      <button class="btn-close-compare" onclick="closeComparison()" title="Закрыть">✕</button>
+    </div>
+    <div class="compare-modal-body" id="compareModalBody"></div>
+  </div>
+</div>
+</body>
+</html>

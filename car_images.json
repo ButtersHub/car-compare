@@ -1,0 +1,172 @@
+{
+  "Peugeot 3008": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/2016_Peugeot_3008_in_Vapor_Grey%2C_front_left%2C_06-08-2025.jpg/600px-2016_Peugeot_3008_in_Vapor_Grey%2C_front_left%2C_06-08-2025.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/2016_Peugeot_3008_in_Vapor_Grey%2C_rear_left%2C_06-08-2025.jpg/600px-2016_Peugeot_3008_in_Vapor_Grey%2C_rear_left%2C_06-08-2025.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Peugeot_3008_THP_165_EAT6_Allure_GT-Line_%28II%29_%E2%80%93_Innenraum%2C_20._September_2017%2C_D%C3%BCsseldorf.jpg/600px-Peugeot_3008_THP_165_EAT6_Allure_GT-Line_%28II%29_%E2%80%93_Innenraum%2C_20._September_2017%2C_D%C3%BCsseldorf.jpg"
+  },
+  "Peugeot 2008": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2015_Peugeot_2008_in_Bianca_White%2C_front_right%2C_06-08-2025.jpg/600px-2015_Peugeot_2008_in_Bianca_White%2C_front_right%2C_06-08-2025.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2015_Peugeot_2008_in_Bianca_White%2C_rear_right%2C_06-08-2025.jpg/600px-2015_Peugeot_2008_in_Bianca_White%2C_rear_right%2C_06-08-2025.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/2018_Peugeot_2008_Allure_PureTech_130_1.2_Interior.jpg/600px-2018_Peugeot_2008_Allure_PureTech_130_1.2_Interior.jpg"
+  },
+  "Seat Arona": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/2026_SEAT_Arona_Auto_Zuerich_2025_DSC_3583.jpg/600px-2026_SEAT_Arona_Auto_Zuerich_2025_DSC_3583.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/2026_SEAT_Arona_Auto_Zuerich_2025_DSC_3585.jpg/600px-2026_SEAT_Arona_Auto_Zuerich_2025_DSC_3585.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/2018_SEAT_Arona_SE_Technology_TSi_1.0_Front_%281%29.jpg/600px-2018_SEAT_Arona_SE_Technology_TSi_1.0_Front_%281%29.jpg"
+  },
+  "Skoda Kamiq": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/%C5%A0koda_Kamiq_Facelift_IMG_8638.jpg/600px-%C5%A0koda_Kamiq_Facelift_IMG_8638.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/%C5%A0koda_Kamiq_Facelift_IMG_8645.jpg/600px-%C5%A0koda_Kamiq_Facelift_IMG_8645.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Skoda_Kamiq_%282019%29_Monte_Carlo_1X7A6166.jpg/600px-Skoda_Kamiq_%282019%29_Monte_Carlo_1X7A6166.jpg"
+  },
+  "Citroen C5 Aircross": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/2026_Citro%C3%ABn_C5_Aircross_IMG_4946.jpg/600px-2026_Citro%C3%ABn_C5_Aircross_IMG_4946.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/2025_Citro%C3%ABn_C5_Aircross_Plug-in-Hybrid_Auto_Zuerich_2025_DSC_3741.jpg/600px-2025_Citro%C3%ABn_C5_Aircross_Plug-in-Hybrid_Auto_Zuerich_2025_DSC_3741.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Citro%C3%ABn_%C3%AB-C5_Aircross_Auto_Zuerich_2025_DSC_3486.jpg/600px-Citro%C3%ABn_%C3%AB-C5_Aircross_Auto_Zuerich_2025_DSC_3486.jpg"
+  },
+  "Nissan Qashqai": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Nissan_Qashqai_%28III%29_%E2%80%93_f_11102025.jpg/600px-Nissan_Qashqai_%28III%29_%E2%80%93_f_11102025.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Nissan_Qashqai_%28III%29_%E2%80%93_h_11102025.jpg/600px-Nissan_Qashqai_%28III%29_%E2%80%93_h_11102025.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/2019_Nissan_Qashqai_Tekna_DIG-T_1.3_Interior.jpg/600px-2019_Nissan_Qashqai_Tekna_DIG-T_1.3_Interior.jpg"
+  },
+  "Volkswagen T-Roc": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/VW_T-Roc_1.5_eTSI_R-Line_%28II%29_%E2%80%93_f_25012026.jpg/600px-VW_T-Roc_1.5_eTSI_R-Line_%28II%29_%E2%80%93_f_25012026.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/VW_T-Roc_1.5_eTSI_R-Line_%28II%29_%E2%80%93_h_25012026.jpg/600px-VW_T-Roc_1.5_eTSI_R-Line_%28II%29_%E2%80%93_h_25012026.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/2018_Volkswagen_T-Roc_Interior.jpg/600px-2018_Volkswagen_T-Roc_Interior.jpg"
+  },
+  "Mazda CX-30": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Mazda_CX-30_EV_01_China_2023-04-21.jpg/600px-Mazda_CX-30_EV_01_China_2023-04-21.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Mazda_CX-30_EV_03_China_2023-04-21.jpg/600px-Mazda_CX-30_EV_03_China_2023-04-21.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/2020_Mazda_CX-30_2.0S_%28Cockpit%29.jpg/600px-2020_Mazda_CX-30_2.0S_%28Cockpit%29.jpg"
+  },
+  "MG EHS": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/MG_HS_Luxury_%28II%29_%E2%80%93_f_15022025.jpg/600px-MG_HS_Luxury_%28II%29_%E2%80%93_f_15022025.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/MG_HS_Luxury_%28II%29_%E2%80%93_h_15022025.jpg/600px-MG_HS_Luxury_%28II%29_%E2%80%93_h_15022025.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/MG_HS_DEL_%28Trophy%29_black_interior_view_in_Brunei.jpg/600px-MG_HS_DEL_%28Trophy%29_black_interior_view_in_Brunei.jpg"
+  },
+  "Skoda Karoq": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Skoda_Karoq_Sportline_%28Facelift%29_%E2%80%93_f_08022026.jpg/600px-Skoda_Karoq_Sportline_%28Facelift%29_%E2%80%93_f_08022026.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Skoda_Karoq_Sportline_%28Facelift%29_%E2%80%93_h_08022026.jpg/600px-Skoda_Karoq_Sportline_%28Facelift%29_%E2%80%93_h_08022026.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Skoda_Karoq_%E2%80%93_f_18042025.jpg/600px-Skoda_Karoq_%E2%80%93_f_18042025.jpg"
+  },
+  "Seat Ateca": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/SEAT_Ateca_facelift_IMG_4101.jpg/600px-SEAT_Ateca_facelift_IMG_4101.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/2017_SEAT_Ateca_Xcellence_1.4_Rear.jpg/600px-2017_SEAT_Ateca_Xcellence_1.4_Rear.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Cupra_Ateca_Facelift_IMG_3667.jpg/600px-Cupra_Ateca_Facelift_IMG_3667.jpg"
+  },
+  "Ford Kuga": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Ford_Kuga_2.5_Duratec_FHEV_AWD_Active_%28III%2C_Facelift%29_%E2%80%93_f_01012025.jpg/600px-Ford_Kuga_2.5_Duratec_FHEV_AWD_Active_%28III%2C_Facelift%29_%E2%80%93_f_01012025.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ford_Kuga_2.5_Duratec_FHEV_AWD_Active_%28III%2C_Facelift%29_%E2%80%93_h_01012025.jpg/600px-Ford_Kuga_2.5_Duratec_FHEV_AWD_Active_%28III%2C_Facelift%29_%E2%80%93_h_01012025.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Ford_Kuga_2.5_Duratec_FHEV_AWD_ST-Line_%28III%2C_Facelift%29_%E2%80%93_f_16082025.jpg/600px-Ford_Kuga_2.5_Duratec_FHEV_AWD_ST-Line_%28III%2C_Facelift%29_%E2%80%93_f_16082025.jpg"
+  },
+  "Jeep Compass": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Jeep_Compass_1.2_e-Hybrid_DCT6_First_Edition_%28III%29_%E2%80%93_f_08022026.jpg/600px-Jeep_Compass_1.2_e-Hybrid_DCT6_First_Edition_%28III%29_%E2%80%93_f_08022026.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Jeep_Compass_1.2_e-Hybrid_DCT6_First_Edition_%28III%29_%E2%80%93_h_08022026.jpg/600px-Jeep_Compass_1.2_e-Hybrid_DCT6_First_Edition_%28III%29_%E2%80%93_h_08022026.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2022_Jeep_Compass_interior.jpg/600px-2022_Jeep_Compass_interior.jpg"
+  },
+  "Hyundai Tucson": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/2025_Hyundai_Tucson_XRT_%28United_States%29_front_view.jpg/600px-2025_Hyundai_Tucson_XRT_%28United_States%29_front_view.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hyundai_Tucson_1.6_T-GDI_PHEV_Trend_%28IV%2C_Facelift%29_%E2%80%93_f_15022025.jpg/600px-Hyundai_Tucson_1.6_T-GDI_PHEV_Trend_%28IV%2C_Facelift%29_%E2%80%93_f_15022025.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/HYUNDAI_TUCSON_HYBRID_%28NX4%29_CHINA_VERSION_INTERIOR.jpg/600px-HYUNDAI_TUCSON_HYBRID_%28NX4%29_CHINA_VERSION_INTERIOR.jpg"
+  },
+  "Kia Sportage": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/2025_Kia_Sportage_%28NQ5%29_Automesse_Ludwigsburg_2025_DSC_2533.jpg/600px-2025_Kia_Sportage_%28NQ5%29_Automesse_Ludwigsburg_2025_DSC_2533.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/2025_Kia_Sportage_%28NQ5%29_Automesse_Ludwigsburg_2025_DSC_2539.jpg/600px-2025_Kia_Sportage_%28NQ5%29_Automesse_Ludwigsburg_2025_DSC_2539.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Kia_Sportage_%28QL%29_interior.jpg/600px-Kia_Sportage_%28QL%29_interior.jpg"
+  },
+  "Volkswagen Tiguan": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/2025_Volkswagen_Tiguan_Highline_R-Line_4MOTION_in_Oryx_White_Pearl%2C_front_left%2C_2025-05-18.jpg/600px-2025_Volkswagen_Tiguan_Highline_R-Line_4MOTION_in_Oryx_White_Pearl%2C_front_left%2C_2025-05-18.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/2025_Volkswagen_Tiguan_Highline_R-Line_4MOTION_in_Oryx_White_Pearl%2C_rear_left%2C_2025-05-18.jpg/600px-2025_Volkswagen_Tiguan_Highline_R-Line_4MOTION_in_Oryx_White_Pearl%2C_rear_left%2C_2025-05-18.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/2018_Volkswagen_Tiguan_Allspace_SE_NAV_TDi_2.0_Interior.jpg/600px-2018_Volkswagen_Tiguan_Allspace_SE_NAV_TDi_2.0_Interior.jpg"
+  },
+  "Chery Tiggo 7 Pro": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Chery_Tiggo_7_%28%E7%91%9E%E8%99%8E7%29_III_C-DM_01_China_2025-03-31.jpg/600px-Chery_Tiggo_7_%28%E7%91%9E%E8%99%8E7%29_III_C-DM_01_China_2025-03-31.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Chery_Tiggo_7_%28%E7%91%9E%E8%99%8E7%29_III_C-DM_02_China_2025-03-31.jpg/600px-Chery_Tiggo_7_%28%E7%91%9E%E8%99%8E7%29_III_C-DM_02_China_2025-03-31.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chery_Tiggo_7_Plus_interior_at_the_launch_event.jpg/600px-Chery_Tiggo_7_Plus_interior_at_the_launch_event.jpg"
+  },
+  "Mitsubishi Outlander": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/2025_Mitsubishi_Outlander_PHEV_%28fourth_generation%29_DSC_8856.jpg/600px-2025_Mitsubishi_Outlander_PHEV_%28fourth_generation%29_DSC_8856.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2025_Mitsubishi_Outlander_PHEV_%28fourth_generation%29_IMG_3128_%28cropped%29.jpg/600px-2025_Mitsubishi_Outlander_PHEV_%28fourth_generation%29_IMG_3128_%28cropped%29.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/2023_Mitsubishi_Outlander_interior.jpg/600px-2023_Mitsubishi_Outlander_interior.jpg"
+  },
+  "Mazda CX-5": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Mazda_CX-5_%28KI%29_Auto_Zuerich_2025_DSC_3507.jpg/600px-Mazda_CX-5_%28KI%29_Auto_Zuerich_2025_DSC_3507.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/2024_Mazda_CX-5_2.5_S_Select_in_Platinum_Quartz_Metallic%2C_front_right.jpg/600px-2024_Mazda_CX-5_2.5_S_Select_in_Platinum_Quartz_Metallic%2C_front_right.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Mazda_CX-5_XD_L_Package_2WD_%28LDA-KF2P%29_interior.jpg/600px-Mazda_CX-5_XD_L_Package_2WD_%28LDA-KF2P%29_interior.jpg"
+  },
+  "Subaru Forester": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/2026_Subaru_Forester_Wilderness%2C_front_NYIAS_2025.jpg/600px-2026_Subaru_Forester_Wilderness%2C_front_NYIAS_2025.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/2026_Subaru_Forester_Wilderness%2C_rear_NYIAS_2025.jpg/600px-2026_Subaru_Forester_Wilderness%2C_rear_NYIAS_2025.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Subaru_FORESTER_Premium_%285BA-SK9%29_interior.jpg/600px-Subaru_FORESTER_Premium_%285BA-SK9%29_interior.jpg"
+  },
+  "Honda CR-V": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2022_Honda_CR-V_EX-L_%28facelift%29%2C_front_3.31.23.jpg/600px-2022_Honda_CR-V_EX-L_%28facelift%29%2C_front_3.31.23.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/2022_Honda_CR-V_EX-L_%28facelift%29%2C_rear_3.31.23.jpg/600px-2022_Honda_CR-V_EX-L_%28facelift%29%2C_rear_3.31.23.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/2018_Honda_CR-V_%28RW_MY18%29_%2BSport_2WD_wagon_%282018-10-22%29_01.jpg/600px-2018_Honda_CR-V_%28RW_MY18%29_%2BSport_2WD_wagon_%282018-10-22%29_01.jpg"
+  },
+  "Subaru Crosstrek": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Subaru_Crosstrek_2.0ie_Active_%28III%29_%E2%80%93_f_31052025.jpg/600px-Subaru_Crosstrek_2.0ie_Active_%28III%29_%E2%80%93_f_31052025.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Subaru_XV_AWD_%28II%29_%E2%80%93_f_04082025.jpg/600px-Subaru_XV_AWD_%28II%29_%E2%80%93_f_04082025.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/2021_Subaru_XV_1.6i_light_blue_interior_view_in_Brunei.jpg/600px-2021_Subaru_XV_1.6i_light_blue_interior_view_in_Brunei.jpg"
+  },
+  "Toyota Corolla Cross": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/2026_Toyota_Corolla_Cross_HEV_GR_Sport.jpg/600px-2026_Toyota_Corolla_Cross_HEV_GR_Sport.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/%28MYS-Kuala_Lumpur%29_Private_Toyota_Corolla_Cross_SB993_2025-01-28.jpg/600px-%28MYS-Kuala_Lumpur%29_Private_Toyota_Corolla_Cross_SB993_2025-01-28.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Toyota_Corolla_Cross_2026_interior.jpg/600px-Toyota_Corolla_Cross_2026_interior.jpg"
+  },
+  "Honda HR-V": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Honda_HR-V_e-HEV_Advance_Plus_%28III%2C_Facelift%29_%E2%80%93_f_30032025.jpg/600px-Honda_HR-V_e-HEV_Advance_Plus_%28III%2C_Facelift%29_%E2%80%93_f_30032025.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Honda_HR-V_e-HEV_Advance_Plus_%28III%2C_Facelift%29_%E2%80%93_h_30032025.jpg/600px-Honda_HR-V_e-HEV_Advance_Plus_%28III%2C_Facelift%29_%E2%80%93_h_30032025.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2023_Honda_HR-V_Sport_%28United_States%29_interior.png/600px-2023_Honda_HR-V_Sport_%28United_States%29_interior.png"
+  },
+  "Toyota C-HR": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Toyota_C-HR%2B_Auto_Zuerich_2025_DSC_3053.jpg/600px-Toyota_C-HR%2B_Auto_Zuerich_2025_DSC_3053.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Toyota_C-HR%2B_Auto_Zuerich_2025_DSC_3056_%28cropped%29.jpg/600px-Toyota_C-HR%2B_Auto_Zuerich_2025_DSC_3056_%28cropped%29.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Toyota_C-HR_1.8_Hybrid_Teamplayer_%28II%29_%E2%80%93_f_16082025.jpg/600px-Toyota_C-HR_1.8_Hybrid_Teamplayer_%28II%29_%E2%80%93_f_16082025.jpg"
+  },
+  "Kia Niro": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/2023_Kia_Niro_EX%2C_front_1.2.23.jpg/600px-2023_Kia_Niro_EX%2C_front_1.2.23.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/2023_Kia_Niro_EX%2C_rear_1.2.23.jpg/600px-2023_Kia_Niro_EX%2C_rear_1.2.23.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Kia_Niro_Plus_DE_PBV_EV_Black_Interior_%286%29.jpg/600px-Kia_Niro_Plus_DE_PBV_EV_Black_Interior_%286%29.jpg"
+  },
+  "Opel Grandland": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/2024_Vauxhall_Grandland_GS_EV_-_73kWh_%28213PS%29_Electric_-_Impact_Copper_-_02-2025%2C_Front.jpg/600px-2024_Vauxhall_Grandland_GS_EV_-_73kWh_%28213PS%29_Electric_-_Impact_Copper_-_02-2025%2C_Front.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2024_Vauxhall_Grandland_GS_EV_-_73kWh_%28213PS%29_Electric_-_Impact_Copper_-_02-2025%2C_Rear.jpg/600px-2024_Vauxhall_Grandland_GS_EV_-_73kWh_%28213PS%29_Electric_-_Impact_Copper_-_02-2025%2C_Rear.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Opel_Grandland_Electric_4x4_Auto_Zuerich_2025_DSC_3283.jpg/600px-Opel_Grandland_Electric_4x4_Auto_Zuerich_2025_DSC_3283.jpg"
+  },
+  "Cupra Formentor": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Cupra_Formentor_VZ5_Auto_Zuerich_2021_IMG_0569.jpg/600px-Cupra_Formentor_VZ5_Auto_Zuerich_2021_IMG_0569.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Cupra_Formentor_Facelift_IMG_0665.jpg/600px-Cupra_Formentor_Facelift_IMG_0665.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Cupra_Formentor_Facelift_IMG_0666.jpg/600px-Cupra_Formentor_Facelift_IMG_0666.jpg"
+  },
+  "DS7 Crossback": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/DS_7_%282022%29_IMG_9959_%28cropped%29.jpg/600px-DS_7_%282022%29_IMG_9959_%28cropped%29.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/DS_7_%282022%29_IMG_9962_%28cropped%29.jpg/600px-DS_7_%282022%29_IMG_9962_%28cropped%29.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/DS_7_Crossback_E-Tense_Auto_Zuerich_2021_IMG_0588.jpg/600px-DS_7_Crossback_E-Tense_Auto_Zuerich_2021_IMG_0588.jpg"
+  },
+  "Suzuki S-Cross": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Suzuki_SX4_%283rd_generation%29_1X7A0870.jpg/600px-Suzuki_SX4_%283rd_generation%29_1X7A0870.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Suzuki_SX4_%283rd_generation%29_1X7A6969.jpg/600px-Suzuki_SX4_%283rd_generation%29_1X7A6969.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/2022_Suzuki_SX4_S-Cross_AllGrip_Hybrid_Interior.jpg/600px-2022_Suzuki_SX4_S-Cross_AllGrip_Hybrid_Interior.jpg"
+  },
+  "Nissan X-Trail": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/2006_Nissan_X-Trail_Bonavista_AWD_in_Platinum%2C_front_left%2C_2025-05-22.jpg/600px-2006_Nissan_X-Trail_Bonavista_AWD_in_Platinum%2C_front_left%2C_2025-05-22.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/2025_Nissan_X-Trail_Autech_Sports_Spec_e-4ORCE.jpg/600px-2025_Nissan_X-Trail_Autech_Sports_Spec_e-4ORCE.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/2025_Nissan_X-Trail_G_e-4ORCE_interior.jpg/600px-2025_Nissan_X-Trail_G_e-4ORCE_interior.jpg"
+  },
+  "Skoda Kodiaq": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/%C5%A0koda_Kodiaq_II_RS_MYLE_Festival_2025_DSC_9601.jpg/600px-%C5%A0koda_Kodiaq_II_RS_MYLE_Festival_2025_DSC_9601.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/%C5%A0koda_Kodiaq_II_RS_MYLE_Festival_2025_DSC_9604.jpg/600px-%C5%A0koda_Kodiaq_II_RS_MYLE_Festival_2025_DSC_9604.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/2021_SKODA_Kodiaq_1.4_Ambition_silver_interior_view_in_Brunei.jpg/600px-2021_SKODA_Kodiaq_1.4_Ambition_silver_interior_view_in_Brunei.jpg"
+  },
+  "Volkswagen Tiguan Allspace": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/2025_Volkswagen_Tiguan_Highline_R-Line_4MOTION_in_Oryx_White_Pearl%2C_front_left%2C_2025-05-18.jpg/600px-2025_Volkswagen_Tiguan_Highline_R-Line_4MOTION_in_Oryx_White_Pearl%2C_front_left%2C_2025-05-18.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/2025_Volkswagen_Tiguan_Highline_R-Line_4MOTION_in_Oryx_White_Pearl%2C_rear_left%2C_2025-05-18.jpg/600px-2025_Volkswagen_Tiguan_Highline_R-Line_4MOTION_in_Oryx_White_Pearl%2C_rear_left%2C_2025-05-18.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/2018_Volkswagen_Tiguan_Allspace_SE_NAV_TDi_2.0_Interior.jpg/600px-2018_Volkswagen_Tiguan_Allspace_SE_NAV_TDi_2.0_Interior.jpg"
+  },
+  "Toyota RAV4": {
+    "front": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/2026_Toyota_RAV4_PHEV_GR_Sport_Prototype_rear.jpg/600px-2026_Toyota_RAV4_PHEV_GR_Sport_Prototype_rear.jpg",
+    "side": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2025_Toyota_RAV4_Hybrid_Adventure_rear.jpg/600px-2025_Toyota_RAV4_Hybrid_Adventure_rear.jpg",
+    "interior": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Toyota_RAV4_%28III%2C_2._Facelift%29_%E2%80%93_f_30012025.jpg/600px-Toyota_RAV4_%28III%2C_2._Facelift%29_%E2%80%93_f_30012025.jpg"
+  }
+}
