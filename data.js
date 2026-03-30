@@ -504,7 +504,7 @@ const CARS = [
     country: "Южная Корея",
     countryFlag: "🇰🇷",
     mfgCountry: "Чехия / Корея",
-    yad2: "https://www.yad2.co.il/vehicles/cars?manufacturer=21&model=10292&year=2021--1",
+    yad2: "https://www.yad2.co.il/vehicles/cars?manufacturer=21&model=10283&year=2021--1",
     hp: "120–198",
     hpMin: 120,
     hpMax: 198,
